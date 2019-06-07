@@ -4,6 +4,7 @@ const checkUser = () => {
     // se estiver, buscar as informações do usuario
    getUser()
   }else{
+    // se não tiver token, redireciona para a tela de login
     window.location.href = "index.html"
   }
 }
@@ -65,7 +66,11 @@ const criaPainel = (user) => {
 }
 
 const testarApi = () => {
+  // para acessar a api de recurso precisamos do token que está
+  // no localStorage e aqui acessamos ele
   fetch("https://lais-api-reprograma.herokuapp.com/resource", {
+    // passamos o nosso token de autenticação no header 
+    // da chamada
     headers: {
       'Accept': 'application/json',
       'Content-type':'application/json',
@@ -79,8 +84,12 @@ const testarApi = () => {
 }
 
 const signOut = () => {
+  //  esta função faz lougout, para isso vamos limpar o localStorage
   localStorage.clear()
+  // e redirecionamos o usuário para a tela de login
   window.location.href = "index.html"
 }
 
+// Função que será executada assim que este arquivo ser 
+// importado no html
 checkUser()
