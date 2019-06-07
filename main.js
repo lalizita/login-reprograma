@@ -20,8 +20,8 @@ form.addEventListener("submit", event => {
 })
 .then(resposta => resposta.json())
 .then(objetoJavascript => {
-  console.log(objetoJavascript)
   localStorage.setItem('token', objetoJavascript.token)
+  window.location.href="home.html"
 })
 .catch(error => console.log(error))
 })
