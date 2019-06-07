@@ -5,6 +5,6 @@ Ao fazer login, o usuário receberá um token da api, este token deve ser usado 
 api de login: https://lais-api-reprograma.herokuapp.com/login
 api de resource autenticada: https://lais-api-reprograma.herokuapp.com/resource
 
-random user api https://randomuser.me/
+random user api https://randomuser.me/api/
 
 [slides fetchAPI](https://docs.google.com/presentation/d/1_eaIDf3Iqop-RSuTeE8sLmooiIhKNV4L8ThHDYDCuG0/edit?usp=sharing)
